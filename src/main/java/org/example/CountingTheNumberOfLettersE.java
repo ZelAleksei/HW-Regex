@@ -17,6 +17,6 @@ public class CountingTheNumberOfLettersE {
             }
         }
         
-        System.out.println("Количество букв Е в предствленном тексте " + count);
+        System.out.println("Количество букв 'е' в предствленном тексте " + count);
     }
 }
