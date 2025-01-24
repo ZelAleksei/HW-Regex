@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class CountingTheNumberOfLettersE {
 
     /**
@@ -9,14 +11,17 @@ public class CountingTheNumberOfLettersE {
      */
     public static void counting(String text, char ch) {
 
- 
-        int count = 0; // объявление переменной счётчика
-        for (int i = 0; i < text.length(); i++) { // цикл по длине текста в котором по символьно происходит сверка и увеличение счетчика
-            if(text.charAt(i) == ch ) {
-                count++;
+        String[] listOfWords =  text.split(" "); // создаем массив для хранения слов из текста и разбиваем строку на слова
+
+
+        for (int i = 0; i < listOfWords.length; i++) {
+            int count = 0; // объявление переменной счётчика
+            for (int j = 0; j < listOfWords[i].length(); j++) { // цикл по длине текста в котором по символьно происходит сверка и увеличение счетчика
+                if(listOfWords[i].charAt(j) == ch ) {
+                    count++;
+                }
             }
+            System.out.println("Количество букв 'е' в слове " +"'"+ listOfWords[i] +"'"+ " = " + count);
         }
-        
-        System.out.println("Количество букв 'е' в предствленном тексте " + count);
     }
 }
