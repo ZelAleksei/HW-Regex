@@ -23,5 +23,11 @@ public class CountingTheNumberOfLettersE {
             }
             System.out.println("Количество букв 'е' в слове " +"'"+ listOfWords[i] +"'"+ " = " + count);
         }
+
+        //Второй вариант более эфективный и без вложенного цикла
+//        for (String word : listOfWords) {
+//            int count = word.length() - word.replaceAll(String.valueOf(ch), "").length();
+//            System.out.println("Количество букв '" + ch + "' в слове " + "'" + word + "'" + " = " + count);
+//        }
     }
 }
